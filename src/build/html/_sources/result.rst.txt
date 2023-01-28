@@ -1,4 +1,4 @@
-./Viewing the result
+.Viewing the result
 ----------------------------------------------
 
 Open an existing result
