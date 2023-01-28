@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Drawing the network &mdash; CO2 Injection Network Scenario Analysis Tool (INSAT)  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Setting the simulation scenario" href="scenario.html" />
+    <link rel="prev" title="4. Managing the project" href="project.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> CO2 Injection Network Scenario Analysis Tool (INSAT)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="login.html">2. Login Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">3. Main Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">4. Managing the project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Drawing the network</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#network-component">5.1. Network Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#navigator">5.2. Navigator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-the-component">5.3. Add the component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#compressor">5.3.1. Compressor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pipe">5.3.2. Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hub">5.3.3. Hub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#well">5.3.4. Well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reservoir">5.3.5. Reservoir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#connect-the-components">5.4. Connect the components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#compressor-to-pipe">5.4.1. Compressor to Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pipe-to-hub">5.4.2. Pipe to Hub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-connection">5.4.3. Multiple connection</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-a-network">5.5. Checking a network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-component-static-parameters">5.6. Set component static parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">5.6.1. Compressor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">5.6.2. Reservoir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">5.6.3. Pipe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">5.6.4. Well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">5.6.5. Hub</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scenario.html">6. Setting the simulation scenario</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">7. Running the simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="result.html">8. Viewing the result</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CO2 Injection Network Scenario Analysis Tool (INSAT)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Drawing the network</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/network.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="drawing-the-network">
+<h1><span class="section-number">5. </span>Drawing the network<a class="headerlink" href="#drawing-the-network" title="Permalink to this heading"></a></h1>
+<section id="network-component">
+<h2><span class="section-number">5.1. </span>Network Component<a class="headerlink" href="#network-component" title="Permalink to this heading"></a></h2>
+<p>A valid network consist of at least:</p>
+<ul class="simple">
+<li><p>1 compressor</p></li>
+<li><p>1 pipe</p></li>
+<li><p>1 hub</p></li>
+<li><p>1 well</p></li>
+<li><p>1 reservoir</p></li>
+</ul>
+<p>There are two types of geometry: a line and a marker.
+Compressor, Valve and Reservoir is modelled as a marker; Pipe, Well, and Hub is modelled as a line</p>
+</section>
+<section id="navigator">
+<h2><span class="section-number">5.2. </span>Navigator<a class="headerlink" href="#navigator" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="_images/networknavigator.png"><img alt="_images/networknavigator.png" src="_images/networknavigator.png" style="width: 500px;" /></a>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>List of components</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Drawing/insert component (line, marker or polygon)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Edit or Remove component</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>Layer selection</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>Zoom in/out</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>Network validator</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="add-the-component">
+<h2><span class="section-number">5.3. </span>Add the component<a class="headerlink" href="#add-the-component" title="Permalink to this heading"></a></h2>
+<section id="compressor">
+<h3><span class="section-number">5.3.1. </span>Compressor<a class="headerlink" href="#compressor" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select component from drop down list, for example compressor</p></li>
+<li><p>Click add marker symbol</p></li>
+<li><p>Place the compressor in the desired location</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/addcompressor.png"><img alt="_images/addcompressor.png" src="_images/addcompressor.png" style="width: 500px;" /></a>
+</section>
+<section id="pipe">
+<h3><span class="section-number">5.3.2. </span>Pipe<a class="headerlink" href="#pipe" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select Pipe from drop down list</p></li>
+<li><p>Click add line symbol</p></li>
+<li><p>Start place pipe from compressor</p></li>
+<li><p>End the pipe by clocking the white square end point</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/addpipe.png"><img alt="_images/addpipe.png" src="_images/addpipe.png" style="width: 500px;" /></a>
+</section>
+<section id="hub">
+<h3><span class="section-number">5.3.3. </span>Hub<a class="headerlink" href="#hub" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select Hub from drop down list</p></li>
+<li><p>Click add line symbol</p></li>
+<li><p>Start place hub from pipe</p></li>
+<li><p>End the hub by clicking the white square end point</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/addhub.png"><img alt="_images/addhub.png" src="_images/addhub.png" style="width: 500px;" /></a>
+</section>
+<section id="well">
+<h3><span class="section-number">5.3.4. </span>Well<a class="headerlink" href="#well" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select Well from drop down list</p></li>
+<li><p>Click add line symbol</p></li>
+<li><p>Start place well from hub (since the well is vertical, this is a diagram only)</p></li>
+<li><p>End the well by clicking the white square end point</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/addwell.png"><img alt="_images/addwell.png" src="_images/addwell.png" style="width: 500px;" /></a>
+</section>
+<section id="reservoir">
+<h3><span class="section-number">5.3.5. </span>Reservoir<a class="headerlink" href="#reservoir" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select Reservoir from drop down list</p></li>
+<li><p>Click add marker symbol</p></li>
+<li><p>Place the reservoir at the end of the well</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/addreservoir.png"><img alt="_images/addreservoir.png" src="_images/addreservoir.png" style="width: 500px;" /></a>
+</section>
+</section>
+<section id="connect-the-components">
+<h2><span class="section-number">5.4. </span>Connect the components<a class="headerlink" href="#connect-the-components" title="Permalink to this heading"></a></h2>
+<p>The components that are placed in the network needs to be connected to each other.
+Below you can see how to connect each component.</p>
+<section id="compressor-to-pipe">
+<h3><span class="section-number">5.4.1. </span>Compressor to Pipe<a class="headerlink" href="#compressor-to-pipe" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select compressor</p></li>
+<li><p>Fill the outport of the compressor with pipe’s name: pipe1</p></li>
+<li><p>Don’t forget to click Save Parameter</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/connectcompressor.png"><img alt="_images/connectcompressor.png" src="_images/connectcompressor.png" style="width: 500px;" /></a>
+</section>
+<section id="pipe-to-hub">
+<h3><span class="section-number">5.4.2. </span>Pipe to Hub<a class="headerlink" href="#pipe-to-hub" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select pipe. Since we already connect comporessor with pipe, the inport is already filled in.</p></li>
+<li><p>Fill the outport of the pipe with hub’s name: hub1</p></li>
+<li><p>Don’t forget to click Save Parameter</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/connectpipehub.png"><img alt="_images/connectpipehub.png" src="_images/connectpipehub.png" style="width: 500px;" /></a>
+</section>
+<section id="multiple-connection">
+<h3><span class="section-number">5.4.3. </span>Multiple connection<a class="headerlink" href="#multiple-connection" title="Permalink to this heading"></a></h3>
+<p>You can continue to connect the rest of components (hub, well, reservoir).
+It is also possible to have multiple components connected via a Hub.</p>
+<p>for example a hub connected to pipe2,well1,well2 (using <em>comma</em>)</p>
+<a class="reference internal image-reference" href="_images/multipleconnectionhub.png"><img alt="_images/multipleconnectionhub.png" src="_images/multipleconnectionhub.png" style="width: 500px;" /></a>
+</section>
+</section>
+<section id="checking-a-network">
+<h2><span class="section-number">5.5. </span>Checking a network<a class="headerlink" href="#checking-a-network" title="Permalink to this heading"></a></h2>
+<p>You can check the connection using network validation by clicking Check Network.
+It is not only checking the network connection, but also if there is missing parameter (we will discuss in the next session)</p>
+<p>It will show a popup window regarding number of errors. The full list of errors in shown the console of your browser</p>
+<a class="reference internal image-reference" href="_images/checknetwork.png"><img alt="_images/checknetwork.png" src="_images/checknetwork.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="_images/errorconsole.png"><img alt="_images/errorconsole.png" src="_images/errorconsole.png" style="width: 500px;" /></a>
+<p>Here is how to open error console in the Google Chrome</p>
+<ol class="arabic simple">
+<li><p>Click 3 dots in the right top corner</p></li>
+<li><p>Select More tools</p></li>
+<li><p>Click Developer tools</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/developertool.png"><img alt="_images/developertool.png" src="_images/developertool.png" style="width: 500px;" /></a>
+</section>
+<section id="set-component-static-parameters">
+<h2><span class="section-number">5.6. </span>Set component static parameters<a class="headerlink" href="#set-component-static-parameters" title="Permalink to this heading"></a></h2>
+<p>You can just easily click the component and fill the static parameter field and press Save Parameter</p>
+<p>These are the list of required parameters for each component:</p>
+<section id="id1">
+<h3><span class="section-number">5.6.1. </span>Compressor<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>None</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="id2">
+<h3><span class="section-number">5.6.2. </span>Reservoir<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Reservoir initial pressure</p></li>
+<li><p>Reservoir parameter in .xlsx file consist of 4 columns (inflowModel, wellNames, PI, tankV)</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/reservoirparameter.png"><img alt="_images/reservoirparameter.png" src="_images/reservoirparameter.png" style="width: 500px;" /></a>
+</div></blockquote>
+</section>
+<section id="id3">
+<h3><span class="section-number">5.6.3. </span>Pipe<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Pipe Maximum Pressure (if there is no pressure limit, put value 0)</p></li>
+<li><p>Pipe Table in .xlsx file consist of 5 columns (Flow rate, Inlet Pressure, Inlet enthalpy, Outlet Pressure, Outlet enthalpy)</p></li>
+<li><p><em>Note:</em> The simulator will not do any extrapolation, please make sure the flow rate and pressure range is covered.</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/pipetable.png"><img alt="_images/pipetable.png" src="_images/pipetable.png" style="width: 500px;" /></a>
+</div></blockquote>
+</section>
+<section id="id4">
+<h3><span class="section-number">5.6.4. </span>Well<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Well Table in .xlsx file consist of 5 columns (Flow rate, Inlet Pressure, Inlet enthalpy, Outlet Pressure, Outlet enthalpy)</p></li>
+<li><p><em>Note:</em> The simulator will not do any extrapolation, please make sure the flow rate and pressure range is covered.</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/welltable.png"><img alt="_images/welltable.png" src="_images/welltable.png" style="width: 500px;" /></a>
+</div></blockquote>
+</section>
+<section id="id5">
+<h3><span class="section-number">5.6.5. </span>Hub<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>None</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="project.html" class="btn btn-neutral float-left" title="4. Managing the project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="scenario.html" class="btn btn-neutral float-right" title="6. Setting the simulation scenario" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, R. Octaviano, R.J.P. van der Linden, A.T. Nimwegen, S.P.C. Belfroid.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

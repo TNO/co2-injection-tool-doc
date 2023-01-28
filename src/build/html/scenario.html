@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. Setting the scenario &mdash; CO2 Injection Network Scenario Analysis Tool (INSAT)  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Running the simulation" href="simulation.html" />
+    <link rel="prev" title="5. Drawing the network" href="network.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> CO2 Injection Network Scenario Analysis Tool (INSAT)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="login.html">2. Login Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">3. Main Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">4. Managing the project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network.html">5. Drawing the network</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Setting the scenario</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-scenario">6.1. Create scenario</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#compressor">6.1.1. Compressor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hub">6.1.2. Hub</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#open-an-existing-scenario">6.2. Open an existing scenario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#save-a-scenario">6.3. Save a scenario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-a-scenario">6.4. Delete a scenario</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">7. Running the simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="result.html">8. Viewing the result</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CO2 Injection Network Scenario Analysis Tool (INSAT)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>Setting the scenario</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/scenario.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setting-the-scenario">
+<h1><span class="section-number">6. </span>Setting the scenario<a class="headerlink" href="#setting-the-scenario" title="Permalink to this heading"></a></h1>
+<p>Scenario defined as a parameter of a component that can be changed over the time. For example the setpoint of CO2 flowrate</p>
+<a class="reference internal image-reference" href="_images/scenariopanel.png"><img alt="_images/scenariopanel.png" src="_images/scenariopanel.png" style="width: 500px;" /></a>
+<p>The value of each column has this format: <em>date value</em>. Date format is <em>day-month-year hour:minute</em></p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p>1-jan-2022 100</p></li>
+<li><p>1-jan-2022 01:00 150</p></li>
+</ul>
+</dd>
+</dl>
+<p>When you have several values, then you can add by using <em>comma</em></p>
+<dl class="simple">
+<dt>Example:</dt><dd><ul class="simple">
+<li><p>1-jan-2022 100, 3-apr-2022 200</p></li>
+</ul>
+</dd>
+</dl>
+<section id="create-scenario">
+<h2><span class="section-number">6.1. </span>Create scenario<a class="headerlink" href="#create-scenario" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Click + button to create a new scenario</p></li>
+<li><p>Fill in the scenario name</p></li>
+<li><p>The default parameter list will be presented in the table if the network contains the component</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/newscenario.png"><img alt="_images/newscenario.png" src="_images/newscenario.png" style="width: 500px;" /></a>
+<section id="compressor">
+<h3><span class="section-number">6.1.1. </span>Compressor<a class="headerlink" href="#compressor" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Flow Setpoint</strong>. To determine the setpoint flowrate outgoing of the compressor.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="hub">
+<h3><span class="section-number">6.1.2. </span>Hub<a class="headerlink" href="#hub" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Supply Flow Fraction</strong>. To determine the fraction of flow going into the hub. If there is multiple hubs, then the total fraction should be equal to 1</p></li>
+<li><p><strong>Minimum Input Pressure</strong>. To determine the minimum pressure at the inlet of the hub</p></li>
+<li><p><strong>Well flow Fraction</strong>. To determine the allocation of each well connected to the hub. If there are more than 1 wells, then the value should match with the number of wells. For example 3 wells: <em>1-jan-2022 0.3 0.4 0.3</em></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="open-an-existing-scenario">
+<h2><span class="section-number">6.2. </span>Open an existing scenario<a class="headerlink" href="#open-an-existing-scenario" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Select existing scenario from the drop down list</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/scenariobutton.png"><img alt="_images/scenariobutton.png" src="_images/scenariobutton.png" style="width: 500px;" /></a>
+</section>
+<section id="save-a-scenario">
+<h2><span class="section-number">6.3. </span>Save a scenario<a class="headerlink" href="#save-a-scenario" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Click save button to save scenario</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/scenariobutton.png"><img alt="_images/scenariobutton.png" src="_images/scenariobutton.png" style="width: 500px;" /></a>
+</section>
+<section id="delete-a-scenario">
+<h2><span class="section-number">6.4. </span>Delete a scenario<a class="headerlink" href="#delete-a-scenario" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Click trash button to delete scenario</p></li>
+<li><p><em>note</em>: there is no popup window asking confirmation</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/scenariobutton.png"><img alt="_images/scenariobutton.png" src="_images/scenariobutton.png" style="width: 500px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="network.html" class="btn btn-neutral float-left" title="5. Drawing the network" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="simulation.html" class="btn btn-neutral float-right" title="7. Running the simulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, R. Octaviano, R.J.P. van der Linden, A.T. Nimwegen, S.P.C. Belfroid.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
