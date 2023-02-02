@@ -155,6 +155,8 @@ Reservoir
     .. image:: images/reservoirparameter.png
         :width: 500
 
+    Download reservoir parameter example: :download:`xlsx <doc/reservoir1.xlsx>`
+
 Pipe
 """"""""""""""""""""""""""""""""""""""""""""""""""
     * Pipe Maximum Pressure (if there is no pressure limit, put value 0)
@@ -164,6 +166,8 @@ Pipe
     .. image:: images/pipetable.png
         :width: 500
 
+    Download pipetable example: :download:`xlsx <doc/trunklinePipe1.xlsx>`
+
 Well
 """"""""""""""""""""""""""""""""""""""""""""""""""
     * Well Table in .xlsx file consist of 5 columns (Flow rate, Inlet Pressure, Inlet enthalpy, Outlet Pressure, Outlet enthalpy)
@@ -171,6 +175,8 @@ Well
 
     .. image:: images/welltable.png
         :width: 500
+
+    Download welltable example: :download:`xlsx <doc/Well1.xlsx>`
 
 Hub
 """"""""""""""""""""""""""""""""""""""""""""""""""
