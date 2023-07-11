@@ -3,13 +3,14 @@ Installation
 
 Cloud
 ----------------------------------------
-    * *only accessible during testing period 1-Feb-2023 to 1-Apr-2023*
+    * *only accessible during testing period 1-Feb-2023 to 1-Aug-2023*
     * You can access the tool via this website  `http://tnoco2tool.northeurope.cloudapp.azure.com:5100/ <http://tnoco2tool.northeurope.cloudapp.azure.com:5100/>`_
 
 Local Premises
 ----------------------------------------
 
    * You need Docker (`Docker website <https://www.docker.com/products/docker-desktop/>`_) installed in your computer
+   * Please **unchecked** "Use WSL 2 based engine"
    * Create docker-compose.yml file in your folder
 
    .. code-block:: yaml
@@ -17,7 +18,7 @@ Local Premises
       version: '3.8'
       services:
          co2tool:
-           image: ci.tno.nl/htfd/co2tool:latest
+           image: ghcr.io/tno/co2-injection-tool-app/co2tool_webapp:latest
            ports:
              - 5100:5100
            environment:
@@ -32,7 +33,7 @@ Local Premises
              - project-db:/opt/projectdata
 
          worker:
-           image: ci.tno.nl/htfd/co2tool:celeryworker
+           image: ghcr.io/tno/co2-injection-tool-app/co2tool_celery:latest
            environment:
              - PYTHONUNBUFFERED=1
              - CELERY_BROKER_URL=redis://redis:6379/0
